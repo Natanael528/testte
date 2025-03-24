@@ -42,7 +42,7 @@ if selected == 'Focos de queimadas':
         try:
             if st.session_state.ds is None:
                 # Abrir o arquivo NetCDF
-                st.session_state.ds = xr.open_dataset("clima_focos_espacial.nc", engine="h5netcdf")
+                st.session_state.ds = xr.open_dataset("scripts/clima_focos_espacial.nc", engine="h5netcdf")
             ds = st.session_state.ds
             # Converter as coordenadas 'longitude' e 'latitude' para 'lon' e 'lat'
             #ds = ds.rename({'longitude': 'lon', 'latitude': 'lat'})
